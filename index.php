@@ -13,6 +13,8 @@
     $row = $result->fetch_assoc();
     print_r($row);
   ?>
-  
+  <br/>Olá 
+  <?php echo $_SESSION['nome'] ?>!
+<br/><a href="logout.php">Sair</a>
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Suas Turmas</h1>
+        <h1 class="title">Acknowledge Building - Suas Turmas</h1>
         <div class="turmas-list">
             <!-- Cards de turma serão adicionados aqui posteriormente -->
         </div>

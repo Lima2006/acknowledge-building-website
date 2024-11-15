@@ -67,6 +67,19 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
   <img src="assets/logo.png" alt="Imagem" class="imagem-logo">
   <script src="./login.js"></script>
+  
+  <footer class="footer">
+        <div class="footer-left">
+            <p>Copyright Arquitetos do Conhecimento 2024</p>
+        </div>
+        <div class="footer-right">
+            <h4>Acessibilidade</h4>
+            <div class="accessibility">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-text">Aumentar Fonte</span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

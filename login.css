@@ -118,3 +118,50 @@ body {
   margin-top: 15px; /* Adiciona um espaço em cima */
 }
 
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-right {
+  text-align: center;
+}
+
+.footer-right h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.accessibility {
+  display: flex;
+  align-items: center;
+}
+
+.zoom-icon {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.zoom-text {
+  font-size: 14px;
+  color: #333;
+}

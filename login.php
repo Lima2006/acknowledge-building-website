@@ -57,11 +57,12 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
       <div class="options">
         <div>
           <input type="checkbox" id="mostrar-senha" />
-          <label for="show-password">Mostrar senha</label>
+          <label for="mostrar-senha">Mostrar senha</label>
         </div>
         <a href="#" class="login__link">Esqueceu a senha?</a>
       </div>
       <button type="submit" class="login__button" onclick="mostrarSenha()">Entrar</button>
+      <p class="register-text">Novo por aqui? <a href="registro.php" class="register-link">Registre-se</a></p>
     </form>
   </div>
 

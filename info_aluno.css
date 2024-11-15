@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.student-list {
+    list-style: none;
+    padding: 0;
+}
+
+.student-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-weight: bolder;
+}
+
+.student-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 200px;
+    width: calc(100% - 250px);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    font-size: 0.8em;
+    color: #666;
+    border-top: 1px solid #ddd;
+    height: 100px;
+}
+
+.accessibility {
+    cursor: pointer;
+}

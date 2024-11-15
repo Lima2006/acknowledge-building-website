@@ -1,0 +1,75 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Título da página */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos da lista de turmas */
+.turmas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card de turma */
+.turma-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.turma-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    margin-right: 15px;
+}
+
+.turma-info {
+    flex-grow: 1;
+}
+
+.turma-info h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.turma-info p {
+    font-size: 14px;
+    color: #666;
+}

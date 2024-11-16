@@ -150,6 +150,9 @@
             alert('Cadastro realizado com sucesso!');
             document.getElementById('registrationForm').reset();
             selectedUserType = null;
+
+            // Redireciona para a página login.php
+            window.location.href = 'login.php';
         }
     }
 

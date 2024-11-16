@@ -29,12 +29,14 @@ body {
 }
 
 .imagem-logo {
-    position: absolute;
-    top: 15px;
-    left: 30px;
-    width: 269px;
-    height: auto;
-}
+    position: absolute; /* Permite posicionar a imagem em relação ao contêiner */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 269px; /* Defina a largura que você desejar */
+    height: auto; /* Mantém a proporção da imagem */
+    padding-left: 30px;
+    padding-top: 15px;
+  }
 
 .container h2 {
     text-align: center;

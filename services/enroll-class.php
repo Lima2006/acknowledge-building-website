@@ -6,7 +6,7 @@ $classId = $conn->real_escape_string(isset($_GET['classId']) ? $_GET['classId'] 
 $userId = intval($_SESSION['usuario']['id']);
 
 if (!($classId && $userId)) {
-  die("Informe os ids necessários" . $_GET['classId']);
+  die("Informe os ids necessários");
 }
 
 $selectSql = "SELECT * FROM matricula WHERE aluno_id = $userId AND turma_id = $classId";

@@ -28,19 +28,10 @@ body {
 }
 
 .turma-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
-
-.turma-card {
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  text-align: center;
-}
-
 .pagination {
   display: flex;
   justify-content: center;

@@ -5,6 +5,9 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    background-image: url('assets/background-image.webp'); /* Definindo a imagem de fundo */
+    background-size: cover; /* Garantir que a imagem cubra toda a tela */
+    background-position: center; /* Centraliza a imagem */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,10 +17,15 @@ body {
 
 .container {
     background: white;
-    padding: 20px;
+    padding: 30px; /* Aumentando o padding para dar mais espaço interno */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 320px;
+    width: 70%; /* Diminui a largura do formulário */
+    max-width: 500px; /* Limita a largura máxima */
+    min-height: 600px; /* Aumenta a altura mínima do formulário */
+    display: flex;
+    flex-direction: column; /* Garante que os itens fiquem empilhados verticalmente */
+    justify-content: space-between; /* Distribui o espaço livre entre os campos e o botão */
 }
 
 .container h2 {
@@ -28,29 +36,43 @@ body {
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Aumentando a distância entre os campos */
+    display: flex;
+    flex-direction: column; /* Garante que o rótulo e o campo fiquem empilhados */
+    height: 100%; /* Garante que o campo ocupe o máximo de espaço possível */
 }
 
 .input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-size: 14px;
     color: #333;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
 }
 
 .input-group input,
 .input-group select {
-    width: 100%;
-    padding: 8px;
+    width: 100%; /* Campos ocupam toda a largura disponível */
+    padding: 10px; /* Aumenta o padding para os campos ficarem mais espaçosos */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
     outline: none;
+    height: 40px; /* Define uma altura para os campos de entrada */
 }
 
 .input-group input:focus,
 .input-group select:focus {
     border-color: #007bff;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px; /* Espaço entre os campos */
+    width: 100%;
+}
+
+.input-row .input-group {
+    flex: 1; /* Faz os campos terem o mesmo tamanho */
 }
 
 .error {
@@ -73,16 +95,27 @@ body {
 .submit-btn {
     background-color: #007bff;
     color: white;
-    padding: 10px;
+    padding: 15px; /* Aumenta o padding do botão */
     border: none;
     border-radius: 4px;
     width: 100%;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 15px;
     transition: background-color 0.3s ease;
+    margin-top: 20px; /* Distância do botão em relação aos campos */
 }
 
 .submit-btn:hover {
     background-color: #0056b3;
 }
+
+.imagem-logo {
+    position: absolute; /* Permite posicionar a imagem em relação ao contêiner */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 269px; /* Defina a largura que você desejar */
+    height: auto; /* Mantém a proporção da imagem */
+    padding-left: 30px;
+    padding-top: 15px;
+  }
+  

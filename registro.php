@@ -17,18 +17,20 @@
             <div class="error" id="nameError">O nome deve ter no mínimo 3 caracteres e conter apenas letras.</div>
         </div>
 
-        <div class="input-group">
-            <label for="gender">Sexo *</label>
-            <select id="gender" name="gender">
-                <option value="Masculino">Masculino</option>
-                <option value="Feminino">Feminino</option>
-            </select>
-        </div>
+        <div class="input-row">
+            <div class="input-group">
+                <label for="gender">Sexo *</label>
+                <select id="gender" name="gender">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                </select>
+            </div>
 
-        <div class="input-group">
-            <label for="dob">Data de Nascimento *</label>
-            <input type="date" id="dob" name="dob">
-            <div class="error" id="dobError">A data de nascimento é obrigatória.</div>
+            <div class="input-group">
+                <label for="dob">Data de Nascimento *</label>
+                <input type="date" id="dob" name="dob">
+                <div class="error" id="dobError">A data de nascimento é obrigatória.</div>
+            </div>
         </div>
 
         <div class="input-group">
@@ -56,6 +58,7 @@
         <button type="submit" class="submit-btn">Finalizar Cadastro</button>
     </form>
 </div>
+<img src="assets/logo.png" alt="Imagem" class="imagem-logo">
 
 <script>
     function validateForm(event) {

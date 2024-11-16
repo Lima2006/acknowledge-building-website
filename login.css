@@ -134,9 +134,11 @@ body {
 }
 
 .register-link {
-  color: #007BFF; /* Substitua pela cor do botão Entrar */
+  font-size: 14px;
+  color: #1a73e8;
   text-decoration: none;
-  font-weight: bold;
+  margin-left: auto;
+  font-family: 'Inter', sans-serif;
 }
 
 .register-link:hover {

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Senha</title>
     <link rel="stylesheet" href="senha.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
     <style>
         body {
-            background-image: url(img/background.jpeg);
+            background-image: url('assets/background-image.webp');
             background-size: 100% auto;
             background-position: center;
             background-repeat: no-repeat;
@@ -16,9 +17,6 @@
     </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="img/logo.jpeg" alt="Acknowledge Building">
-    </div>
     <div class="container">
         <div class="form-container">
             <h2>Recuperar Senha</h2>
@@ -29,5 +27,6 @@
             </form>
         </div>
     </div>
+    <img src="assets/logo.png" alt="Imagem" class="imagem-logo">
 </body>
 </html>

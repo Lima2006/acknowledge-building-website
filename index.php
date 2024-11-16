@@ -21,30 +21,30 @@
         <input type="text" name="pesquisa" placeholder="Pesquisar Turmas">
         <button type="submit">Confirmar</button>
       </form>
+      <div class="turma-grid">
+        <?php
+        include "connection.php";
 
-      <?php
-      include "connection.php";
+        $pesquisa = $conn->real_escape_string(isset($_POST["pesquisa"]) ? $_POST["pesquisa"] : "");
 
-      $pesquisa = $conn->real_escape_string(isset($_POST["pesquisa"]) ? $_POST["pesquisa"] : "");
-
-      $sql = "SELECT * FROM assunto";
-      if (isset($_POST["pesquisa"])) {
-        $sql .= " WHERE nome LIKE \"%$pesquisa%\"";
-      }
-      $result = $conn->query($sql);
-      if ($result->num_rows > 0) {
-        include "components/assunto_card.php";
-        while ($row = $result->fetch_assoc()) {
-          $render($row);
+        $sql = "SELECT * FROM assunto";
+        if (isset($_POST["pesquisa"])) {
+          $sql .= " WHERE nome LIKE \"%$pesquisa%\"";
         }
-      } else {
-      ?>
-        <span>Nenhum resultado encontrado</span>
-      <?php
-      }
-      ?>
-  </div>
-  </main>
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+          include "components/assunto_card.php";
+          while ($row = $result->fetch_assoc()) {
+            $render($row);
+          }
+        } else {
+        ?>
+          <span>Nenhum resultado encontrado</span>
+        <?php
+        }
+        ?>
+      </div>
+    </main>
   </div>
 </body>
 

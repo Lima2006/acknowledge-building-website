@@ -28,27 +28,27 @@
             <h3>Aprenda Teclado do Zero - Turma A</h3>
             
             <div class="cards">
-                <div class="card">
+                <a href="#" class="card">
                     <h4>Disposição das notas e dedos</h4>
                     <p>Novo conteúdo disponível!</p>
-                </div>
-                <div class="card attention">
+                </a>
+                <a href="#" class="card attention">
                     <h4>Propriedades do som</h4>
                     <p>Atenção!<br>Atividade pendente</p>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#" class="card">
                     <h4>Partitura ou pentagrama</h4>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#" class="card">
                     <h4>Figuras musicais</h4>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#" class="card">
                     <h4>Melodia</h4>
                     <p>Novo conteúdo disponível!</p>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#" class="card">
                     <h4>Baixos</h4>
-                </div>
+                </a>
             </div>
         </main>
     </div>

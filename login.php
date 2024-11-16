@@ -59,7 +59,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
           <input type="checkbox" id="mostrar-senha" />
           <label for="mostrar-senha">Mostrar senha</label>
         </div>
-        <a href="#" class="login__link">Esqueceu a senha?</a>
+        <a href="senha.php" class="login__link">Esqueceu a senha?</a> <!-- Link atualizado -->
       </div>
       <button type="submit" class="login__button" onclick="mostrarSenha()">Entrar</button>
       <p class="register-text">Novo por aqui? <a href="registro.php" class="register-link">Registre-se</a></p>

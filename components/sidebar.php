@@ -8,7 +8,7 @@ $render = function () {
         <li><a href="./">Pesquisar Turmas</a></li>
         <li><a href="./">Suas Turmas</a></li>
         <li><a href="calendario.php">Calendário</a></li>
-        <li><a href="./">Informações Pessoais</a></li>
+        <li><a href="info.php">Informações Pessoais</a></li>
         <li><a href="logout.php">Logout</a></li>
       </ul>
     </nav>

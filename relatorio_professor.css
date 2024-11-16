@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1 {
+    text-align: center;
+    font-size: 18px; /* Reduz o tamanho do título */
+}
+table {
+    width: 80%; /* Reduz a largura da tabela */
+    border-collapse: collapse;
+    margin: 20px auto; /* Centraliza a tabela */
+    font-size: 14px; /* Reduz o tamanho da fonte */
+}
+th, td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 6px; /* Reduz o espaçamento interno */
+}
+th {
+    background-color: #add8e6;
+}
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-right {
+    text-align: center;
+}
+
+.footer-right h4 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.accessibility {
+    display: flex;
+    align-items: center;
+}
+
+.zoom-icon {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.zoom-text {
+    font-size: 14px;
+    color: #333;
+}

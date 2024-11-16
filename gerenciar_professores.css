@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.professor-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.professor-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.professor-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.professor-info {
+    display: flex;
+    flex-direction: column;
+}
+.professor-name {
+    font-weight: bold;
+}
+.professor-email {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do footer*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-right {
+    text-align: center;
+}
+
+.footer-right h4 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.accessibility {
+    display: flex;
+    align-items: center;
+}
+
+.zoom-icon {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.zoom-text {
+    font-size: 14px;
+    color: #333;
+}

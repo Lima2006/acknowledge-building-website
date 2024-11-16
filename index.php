@@ -1,39 +1,51 @@
-<?php include "protect.php" ?>
-
+<?php include "connection.php" ?>
+<?php include "iniciar_sessao.php" ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Início - Acnowledge Building</title>
-  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="stylesheet" href="base.css"
-    </head>
+  <title>Pesquisar Turmas</title>
+  <link rel="stylesheet" href="procurar_assuntos.css">
+</head>
 
 <body>
-  <form method="POST">
-    <input type="search" name="pesquisa">
-    <input type="submit" />
-  </form>
-  <?php
-  include "./connection.php";
+  <div class="container">
+    <?php include "components/sidebar.php";
+    $render(); ?>
 
-  if (isset($_POST["pesquisa"])) {
-    $pesquisa = $conn->real_escape_string($_POST["pesquisa"]);
-    $result = $conn->query("SELECT * FROM assunto WHERE nome LIKE \"%$pesquisa%\"");
-    $tableResult = array();
-    if ($result->num_rows > 0) {
-      while ($row = $result->fetch_assoc()) {
-        $tableResult[] = $row;
-      }
-    }
-    print_r($tableResult);
-  }
-  ?>
-  <br />Olá
-  <?php echo $_SESSION['nome'] ?>!
-  <br /><a href="logout.php">Sair</a>
+    <main class="main-content">
+      <h1>Pesquisar Turmas</h1>
+      <form id="searchForm" method="POST">
+        <input type="text" name="pesquisa" placeholder="Pesquisar Turmas">
+        <button type="submit">Confirmar</button>
+      </form>
+      <div class="turma-grid">
+        <?php
+        include "connection.php";
+
+        $pesquisa = $conn->real_escape_string(isset($_POST["pesquisa"]) ? $_POST["pesquisa"] : "");
+
+        $sql = "SELECT * FROM assunto";
+        if (isset($_POST["pesquisa"])) {
+          $sql .= " WHERE nome LIKE \"%$pesquisa%\"";
+        }
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+          include "components/assunto_card.php";
+          while ($row = $result->fetch_assoc()) {
+            $render($row);
+          }
+        } else {
+        ?>
+          <span>Nenhum resultado encontrado</span>
+        <?php
+        }
+        ?>
+      </div>
+    </main>
+  </div>
 </body>
 
 </html>

@@ -38,12 +38,19 @@
         </ul>
     </div>
     
-    <!-- Rodapé fixo na parte inferior -->
-    <div class="footer">
-        <span>Copyright Arquitetos do Conhecimento 2024</span>
-        <div class="accessibility" onclick="aumentarFonte()">🔍 Aumentar Fonte</div>
-    </div>
-
+    <footer class="footer">
+        <div class="footer-left">
+            <p>Copyright Arquitetos do Conhecimento 2024</p>
+        </div>
+        <div class="footer-right">
+            <h4>Acessibilidade</h4>
+            <div class="accessibility">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-text">Aumentar Fonte</span>
+            </div>
+        </div>
+    </footer>
+    
     <script src="info_aluno.js"></script>
 </body>
 </html>

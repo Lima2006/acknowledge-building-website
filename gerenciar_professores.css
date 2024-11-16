@@ -46,7 +46,7 @@ h1 {
     box-sizing: border-box;
 }
 
-/* Estilos do footer */
+/* Estilos do footer*/
 .footer {
     display: flex;
     justify-content: space-between;

@@ -11,7 +11,6 @@ include 'connection.php';
 
 $query = "SELECT id, nome, email FROM usuario WHERE tipo_professor = TRUE AND status = 'ATIVO'";
 $stmt = $conn->query($query);
-
 $professores = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>

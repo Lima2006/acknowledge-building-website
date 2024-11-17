@@ -10,39 +10,43 @@
 <body>
 <?php
 include 'connection.php';
- FROM
-$sql = "SELECT id, nome assunto";
+include 'protect.php';
+$sql = "SELECT id, nome FROM assunto";
 $result = $conn->query($sql);
 ?>
-<div class="form-container">
-    <form method="get" action="">
-        <div class="form-group">
-            <label for="nome_da_turma">Nome da turma *</label>
-            <input type="text" name="nome_da_turma" class="input-field">
-        </div>
-        <div class="form-group">
-            <label for="assuntos">Assunto *</label>
-            <select name="assunto" id="assunto" class="input-field">
-                <option value="0">Selecionar Assunto</option>
-                <?php
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<option value='" . $row['id'] . "'>" . $row['nome'] . "</option>";
+<div class="container">
+    <?php include "components/sidebar.php";
+    $render(); ?>
+    <div class="form-container">
+        <form method="get" action="">
+            <div class="form-group">
+                <label for="nome_da_turma">Nome da turma *</label>
+                <input type="text" name="nome_da_turma" class="input-field">
+            </div>
+            <div class="form-group">
+                <label for="assuntos">Assunto *</label>
+                <select name="assunto" id="assunto" class="input-field">
+                    <option value="0">Selecionar Assunto</option>
+                    <?php
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<option value='" . $row['id'] . "'>" . $row['nome'] . "</option>";
+                            }
+                        } else {
+                            echo "<option value=''>Nenhum nome encontrado</option>";
                         }
-                    } else {
-                        echo "<option value=''>Nenhum nome encontrado</option>";
-                    }
-                ?>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Descricao">Descrição</label>
-            <textarea name="descricao" class="input-field"></textarea>
-        </div>
-        <div class="form-group">
-            <input type="submit" name="criar" value="Criar" class="submit-button">
-        </div>
-    </form>
+                    ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Descricao">Descrição</label>
+                <textarea name="descricao" class="input-field"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="criar" value="Criar" class="submit-button">
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>

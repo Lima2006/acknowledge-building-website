@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pesquisar Turmas</title>
-  <link rel="stylesheet" href="procurar_assuntos.css">
+  <link rel="stylesheet" href="procurar_turmas.css">
 </head>
 
 <body>

@@ -1,52 +1,56 @@
 <?php
-// Incluindo a conexão com o banco de dados
-include 'connection.php';
+// Conectar ao banco de dados (inclua seu arquivo de conexão)
+include('connection.php');
 
-// Consultando os alunos matriculados
-$sql = "
-    SELECT u.nome AS aluno_nome, COUNT(m.id) AS cursos_matriculados
-    FROM usuario u
-    LEFT JOIN matricula m ON u.id = m.aluno_id
-    WHERE u.tipo_aluno = TRUE AND u.status = 'ATIVO'
-    GROUP BY u.id
-    ORDER BY u.nome;
-";
+// Verificar se o ID do responsável foi passado
+$responsavel_id = isset($_GET['responsavel_id']) ? $_GET['responsavel_id'] : null;
 
-$result = $conn->query($sql);
+// Consultar alunos filtrados por responsável
+if ($responsavel_id) {
+    // Selecionar os alunos com o responsável específico
+    $query = "SELECT * FROM usuario WHERE responsavel_id = '$responsavel_id'";
+} else {
+    // Caso não tenha um responsável selecionado, listar todos os alunos
+    $query = "SELECT * FROM usuario";
+}
+
+$result = mysqli_query($conn, $query);
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seus Alunos</title>
+    <title>Lista de Alunos</title>
     <link rel="stylesheet" href="lista_alunos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle" />
 </head>
 <body>
+    <div class="header-title">Lista de Alunos</div>
     <div class="container">
-        <?php include "components/sidebar.php";
-        $render(); ?>
-        <div class="main-content">
-            <h1>Seus Alunos</h1>
-            <div class="student-list">
-                <?php if ($result->num_rows > 0): ?>
-                    <?php while ($row = $result->fetch_assoc()): ?>
-                        <div class="student-item">
-                            <div class="student-info">
-                                <div class="student-icon">👤</div>
-                                <div>
-                                    <h2><?= htmlspecialchars($row['aluno_nome']) ?></h2>
-                                    <p>Matriculado em <?= htmlspecialchars($row['cursos_matriculados']) ?> cursos</p>
-                                </div>
+        <div class="main-content student-list">
+            <?php
+            // Verifica se há alunos no banco de dados
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '
+                    <div class="student-item">
+                        <div class="student-info">
+                            <span class="student-icon material-symbols-outlined">account_circle</span>
+                            <div>
+                                <h3 class="student-name">' . $row['nome'] . '</h3>
                             </div>
-                            <button class="details-btn">Ver Detalhes</button>
                         </div>
-                    <?php endwhile; ?>
-                <?php else: ?>
-                    <p>Nenhum aluno encontrado.</p>
-                <?php endif; ?>
-            </div>
+                        <div class="actions">
+                            <a href="info.php?id=' . $row['id'] . '" class="details-btn">Ver Detalhes</a>
+                        </div>
+                    </div>';
+                }
+            } else {
+                echo "<p>Nenhum aluno encontrado.</p>";
+            }
+            ?>
         </div>
     </div>
 

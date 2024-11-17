@@ -46,8 +46,8 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   <div class="login">
     <form class="login__form" action="" method="POST">
       <div class="login__form-group">
-        <label for="usuario" class="login__label">Usuário<br></label>
-        <input type="text" id="email" name="email" class="login__input" placeholder="Digite seu usuário" required>
+        <label for="usuario" class="login__label">E-mail<br></label>
+        <input type="text" id="email" name="email" class="login__input" placeholder="Digite seu e-mail" required>
       </div>
       <div class="login__form-group">
         <label for="senha" class="login__label">Senha<br></label>

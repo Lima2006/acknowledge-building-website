@@ -35,7 +35,7 @@ $render = function () {
         <span>Aluno</span>
         <ul>
           <li><a href="./">Pesquisar Turmas</a></li>
-          <li><a href="./">Suas Turmas</a></li>
+          <li><a href="suasturmasaluno.php">Suas Turmas</a></li>
         </ul>
       <?php endif ?>
       <hr>

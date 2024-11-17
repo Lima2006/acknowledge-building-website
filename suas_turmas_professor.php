@@ -23,6 +23,7 @@ $result = $stmt->get_result();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suas Turmas</title>
   <link rel="stylesheet" href="suas_turmas_professor.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 
 <body>
@@ -30,6 +31,7 @@ $result = $stmt->get_result();
     <?php include "components/sidebar.php";
     $render(); ?>
     <main>
+    <a href="criarturmas.php" class="create-class-button">+</a>
       <h1>Suas Turmas</h1>
       <?php if ($result->num_rows > 0): ?>
         <?php while ($row = $result->fetch_assoc()): ?>

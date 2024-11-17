@@ -1,3 +1,5 @@
+<?php include "protect.php"
+?> 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -20,23 +22,28 @@ if ($result) {
 
 ?>
 <body>
-    <h1>Gerenciar Professores</h1>
-    <div class="professor-list">
-        <?php if (!empty($professores)): ?>
-            <?php foreach ($professores as $professor): ?>
-                <div class="professor-item">
-                    <img src="https://via.placeholder.com/40" alt="Foto do Professor">
-                    <div class="professor-info">
-                        <span class="professor-name"><?= htmlspecialchars($professor['nome']) ?></span>
-                        <span class="professor-email"><?= htmlspecialchars($professor['email']) ?></span>
+    <div class="container">
+        <?php include "components/sidebar.php";
+        $render(); ?>
+        <div class="gerenciar-professor">
+        <h1>Gerenciar Professores</h1>
+        <div class="professor-list">
+            <?php if (!empty($professores)): ?>
+                <?php foreach ($professores as $professor): ?>
+                    <div class="professor-item">
+                        <img src="https://via.placeholder.com/40" alt="Foto do Professor">
+                        <div class="professor-info">
+                            <span class="professor-name"><?= htmlspecialchars($professor['nome']) ?></span>
+                            <span class="professor-email"><?= htmlspecialchars($professor['email']) ?></span>
+                        </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p>Nenhum professor encontrado.</p>
-        <?php endif; ?>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Nenhum professor encontrado.</p>
+            <?php endif; ?>
+        </div>
+        </div>
     </div>
-</body>
 <footer class="footer">
         <div class="footer-left">
             <p>Copyright Arquitetos do Conhecimento 2024</p>
@@ -49,4 +56,5 @@ if ($result) {
             </div>
         </div>
 </footer>
+</body>
 </html>

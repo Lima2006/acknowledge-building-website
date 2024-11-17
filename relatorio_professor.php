@@ -39,6 +39,19 @@ while ($row = $result->fetch_assoc()) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relatório das Turmas</title>
   <link rel="stylesheet" href="relatorio_professor.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('assets/background-image.webp'); /* Caminho da imagem */
+      background-size: cover; /* Faz a imagem cobrir toda a tela */
+      background-position: center; /* Centraliza a imagem */
+      background-repeat: no-repeat; /* Evita que a imagem se repita */
+      background-attachment: fixed; /* Faz a imagem ficar estática ao rolar */
+      height: 100vh; /* Garante que o fundo cubra a altura da tela */
+    }
+  </style>
 </head>
 
 <body>

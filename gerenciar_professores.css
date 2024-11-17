@@ -7,9 +7,12 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+.gerenciar-professor {
+    width: 100%;
+}
 .professor-list {
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
 }
 .professor-item {
     display: flex;
@@ -85,4 +88,7 @@ h1 {
 .zoom-text {
     font-size: 14px;
     color: #333;
+}
+.container {
+    display: flex;
 }

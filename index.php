@@ -8,6 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pesquisar Turmas</title>
   <link rel="stylesheet" href="procurar_turmas.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('assets/background-image.webp'); /* Caminho da imagem */
+      background-size: cover; /* Faz a imagem cobrir toda a tela */
+      background-position: center; /* Centraliza a imagem */
+      background-repeat: no-repeat; /* Evita que a imagem se repita */
+      background-attachment: fixed; /* Faz a imagem ficar estática ao rolar */
+      height: 100vh; /* Garante que o fundo cubra a altura da tela */
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
 
 <body>
@@ -46,6 +60,17 @@
       </div>
     </main>
   </div>
+  <footer class="footer">
+        <div class="footer-left">
+            <p>Copyright Arquitetos do Conhecimento 2024</p>
+        </div>
+        <div class="footer-right">
+            <h4>Acessibilidade</h4>
+            <div class="accessibility">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-text">Aumentar Fonte</span>
+            </div>
+        </div>
+</footer>
 </body>
-
 </html>

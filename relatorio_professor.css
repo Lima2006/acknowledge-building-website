@@ -24,6 +24,7 @@ td {
   border: 1px solid #ccc;
   text-align: center;
   padding: 6px; /* Reduz o espaçamento interno */
+  background-color: white;
 }
 th {
   background-color: #add8e6;

@@ -22,6 +22,7 @@ $render = function ($props) {
     max-width: 300px;
     font-family: Arial, sans-serif;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
   }
 
   .card-icon {

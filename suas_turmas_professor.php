@@ -1,6 +1,6 @@
 <?php
 include "connection.php";
-include "protect.php"
+include "protect.php";
 $usuario = $_SESSION['usuario'];
 
 $sql = "

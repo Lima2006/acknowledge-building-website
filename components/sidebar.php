@@ -17,7 +17,7 @@ $render = function () {
         <span>Professor</span>
         <ul>
           <li><a href="./">Suas Turmas</a></li>
-          <li><a href="./">Seus Assuntos</a></li>
+          <li><a href="assuntos_professor.php">Seus Assuntos</a></li>
           <li><a href="relatorio_professor.php">Relatório de Alunos</a></li>
         </ul>
       <?php

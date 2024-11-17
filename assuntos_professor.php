@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprenda Teclado do Zero</title>
-    <link rel="stylesheet" href="assuntos_aluno.css">
+    <link rel="stylesheet" href="assuntos_professor.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
     <style>
         body {

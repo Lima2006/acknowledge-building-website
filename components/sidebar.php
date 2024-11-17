@@ -4,9 +4,42 @@ $render = function () {
   <aside class="sidebar">
     <img src="assets/logo.png" alt="Logo" class="logo">
     <nav>
+      <?php if ($_SESSION['usuario']['tipo_administrador']): ?>
+        <span>Administrador</span>
+        <ul>
+          <li><a href="gerenciar_professores.php">Gerenciar Professores</a></li>
+          <li><a href="gerenciar_materiais.php">Gerenciar Materiais</a></li>
+        </ul>
+        <?php
+      endif;
+      if ($_SESSION['usuario']['tipo_professor']):
+        ?>
+        <span>Professor</span>
+        <ul>
+          <li><a href="./">Suas Turmas</a></li>
+          <li><a href="./">Seus Assuntos</a></li>
+          <li><a href="relatorio_professor.php">Relatório de Alunos</a></li>
+        </ul>
+      <?php
+      endif;
+      if ($_SESSION['usuario']['tipo_responsavel']):
+      ?>
+        <span>Responsável</span>
+        <ul>
+          <li><a href="./">Alunos</a></li>
+        </ul>
+      <?php
+      endif;
+      if ($_SESSION['usuario']['tipo_aluno']):
+      ?>
+        <span>Aluno</span>
+        <ul>
+          <li><a href="./">Pesquisar Turmas</a></li>
+          <li><a href="./">Suas Turmas</a></li>
+        </ul>
+      <?php endif ?>
+      <hr>
       <ul>
-        <li><a href="./">Pesquisar Turmas</a></li>
-        <li><a href="./">Suas Turmas</a></li>
         <li><a href="calendario.php">Calendário</a></li>
         <li><a href="info.php">Informações Pessoais</a></li>
         <li><a href="logout.php">Logout</a></li>
@@ -20,8 +53,8 @@ $render = function () {
 <style>
   .sidebar {
     width: 200px;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
     padding: 20px;
   }
 
@@ -40,7 +73,12 @@ $render = function () {
   }
 
   .sidebar nav ul li a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
+  }
+
+  .sidebar nav span {
+    color: #b8b8b8;
+    font-size: small;
   }
 </style>

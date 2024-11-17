@@ -27,13 +27,13 @@
 
         $pesquisa = $conn->real_escape_string(isset($_POST["pesquisa"]) ? $_POST["pesquisa"] : "");
 
-        $sql = "SELECT * FROM assunto";
+        $sql = "SELECT * FROM turma";
         if (isset($_POST["pesquisa"])) {
           $sql .= " WHERE nome LIKE \"%$pesquisa%\"";
         }
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
-          include "components/assunto_card.php";
+          include "components/turma_card.php";
           while ($row = $result->fetch_assoc()) {
             $render($row);
           }

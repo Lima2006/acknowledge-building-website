@@ -1,3 +1,12 @@
+<?php
+    include "protect.php";
+    include "connection.php";
+    
+    $user_id = $_SESSION ['usuario'] ['id'];
+
+    $sql = "SELECT ma.*, t.nome AS nome_turma FROM material ma INNER JOIN turma t ON t.assunto_id = ma.assunto_id INNER JOIN  matricula m ON t.id = m.turma_id INNER JOIN  usuario u ON m.id = u.id WHERE  u.id = $user_id";
+    $result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,54 +14,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprenda Teclado do Zero</title>
     <link rel="stylesheet" href="assuntos_aluno.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+    <style>
+        body {
+            background-image: url('assets/background-image.webp');
+            background-size: 100% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <aside class="sidebar">
-            <div class="logo">
-                <img src="logo.png" alt="Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Pesquisar Turmas</a></li>
-                    <li><a href="#" class="active">Suas Turmas</a></li>
-                    <li><a href="#">Calendário</a></li>
-                    <li><a href="#">Informações Pessoais</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-            </nav>
-        </aside>
+        <?php
+            include "components/sidebar.php";
+            $render();
+        ?>
         
         <main class="content">
             <h2>Seus Assuntos</h2>
-            <h3>Aprenda Teclado do Zero - Turma A</h3>
-            
+            <h3>
+                <?php
+                    
+                    if ($result->num_rows > 0) {
+                    
+                        $turma = $result->fetch_assoc();
+                        echo htmlspecialchars($turma['nome_turma']);
+                    } else {
+                        echo "Nenhuma turma encontrada.";
+                    }
+                ?>
+            </h3>
+
             <div class="cards">
-                <a href="#" class="card">
-                    <h4>Disposição das notas e dedos</h4>
-                    <p>Novo conteúdo disponível!</p>
-                </a>
-                <a href="#" class="card attention">
-                    <h4>Propriedades do som</h4>
-                    <p>Atenção!<br>Atividade pendente</p>
-                </a>
-                <a href="#" class="card">
-                    <h4>Partitura ou pentagrama</h4>
-                </a>
-                <a href="#" class="card">
-                    <h4>Figuras musicais</h4>
-                </a>
-                <a href="#" class="card">
-                    <h4>Melodia</h4>
-                    <p>Novo conteúdo disponível!</p>
-                </a>
-                <a href="#" class="card">
-                    <h4>Baixos</h4>
-                </a>
+                <?php
+                    
+                    if ($result->num_rows > 0) {
+                    
+                        $result->data_seek(0);
+
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<a href="detalhes.php?id=' . $row["assunto_id"] . '" class="card">';
+                            echo '<h4>' . htmlspecialchars($row["nome"]) . '</h4>';
+                            echo '<p>Descrição: ' . htmlspecialchars($row["descricao"]) . '</p>';
+                            echo '<p>Data: ' . htmlspecialchars($row["data_postagem"]) . '</p>';
+                            echo '</a>';
+                        }
+                    } else {
+                        echo '<p>Nenhum assunto encontrado.</p>';
+                    }
+                ?>
             </div>
         </main>
-    </div>
-    
+
+    </div>            
+
     <footer>
 
     </footer>

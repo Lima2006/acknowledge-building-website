@@ -30,6 +30,7 @@ $result = $stmt->get_result();
     <?php include "components/sidebar.php";
     $render(); ?>
     <main>
+    <a href="criarturmas.php" class="create-class-button">+</a>
       <h1>Suas Turmas</h1>
       <?php if ($result->num_rows > 0): ?>
         <?php while ($row = $result->fetch_assoc()): ?>

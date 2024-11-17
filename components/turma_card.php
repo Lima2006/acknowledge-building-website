@@ -6,7 +6,7 @@ $render = function ($props) {
       <h3 class="card-title"><?php echo $props["nome"] ?></h3>
     </div>
     <p class="card-text">
-      <?php echo $props["categoria"] ?>
+      <?php echo $props["descricao"] ?>
     </p>
     <input type="button" onclick="enrollClass(<?php echo $props['id'] ?>)" value="Matricular-se" />
   </div>

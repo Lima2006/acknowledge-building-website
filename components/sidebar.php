@@ -26,7 +26,7 @@ $render = function () {
       ?>
         <span>Responsável</span>
         <ul>
-          <li><a href="./">Alunos</a></li>
+          <li><a href="info_aluno.php">Alunos</a></li>
         </ul>
       <?php
       endif;

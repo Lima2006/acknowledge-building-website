@@ -41,6 +41,7 @@ $result = mysqli_query($conn, $query);
                         </div>
                         <div class="actions">
                             <a href="detalhe_aluno.php?id=' . $row['id'] . '" class="details-btn">Ver Detalhes</a>
+                            <a href="desempenho.php?id=' . $row['id'] . '" class="details-btn">Ver Gráfico</a>
                         </div>
                     </div>';
                 }

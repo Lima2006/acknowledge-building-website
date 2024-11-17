@@ -1,18 +1,13 @@
 <?php
 // Conectar ao banco de dados (inclua seu arquivo de conexão)
 include('connection.php');
-
+include('protect.php');
 // Verificar se o ID do responsável foi passado
-$responsavel_id = isset($_GET['responsavel_id']) ? $_GET['responsavel_id'] : null;
+$user_id = $_SESSION ['usuario'] ['id'];
 
 // Consultar alunos filtrados por responsável
-if ($responsavel_id) {
-    // Selecionar os alunos com o responsável específico
-    $query = "SELECT * FROM usuario WHERE responsavel_id = '$responsavel_id'";
-} else {
-    // Caso não tenha um responsável selecionado, listar todos os alunos
-    $query = "SELECT * FROM usuario";
-}
+$query = "SELECT * FROM usuario WHERE responsavel_id = '$user_id'";
+
 
 $result = mysqli_query($conn, $query);
 ?>
@@ -29,6 +24,8 @@ $result = mysqli_query($conn, $query);
 <body>
     <div class="header-title">Lista de Alunos</div>
     <div class="container">
+        <?php include "components/sidebar.php";
+        $render(); ?>
         <div class="main-content student-list">
             <?php
             // Verifica se há alunos no banco de dados
@@ -43,7 +40,7 @@ $result = mysqli_query($conn, $query);
                             </div>
                         </div>
                         <div class="actions">
-                            <a href="info.php?id=' . $row['id'] . '" class="details-btn">Ver Detalhes</a>
+                            <a href="detalhe_aluno.php?id=' . $row['id'] . '" class="details-btn">Ver Detalhes</a>
                         </div>
                     </div>';
                 }

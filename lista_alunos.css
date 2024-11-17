@@ -12,16 +12,16 @@ body, html {
 .container {
     display: flex;
     min-height: 100vh;
-}
-
-.main-content {
-    flex: 1;
+    flex-direction: column;
     padding: 20px;
 }
 
-.main-content h1 {
-    font-size: 24px;
+.header-title {
+    font-size: 28px;
     margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
 }
 
 .student-list {
@@ -38,16 +38,34 @@ body, html {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.student-item:hover {
+    transform: scale(1.02);
 }
 
 .student-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .student-icon {
-    font-size: 24px;
+    font-size: 40px;
+    color: #007bff;
+}
+
+.student-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.student-info p {
+    margin: 5px 0;
+    color: #555;
 }
 
 .details-btn {
@@ -55,6 +73,13 @@ body, html {
     border: none;
     color: #007bff;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.details-btn:hover {
+    color: #0056b3;
 }
 
 .footer {
@@ -64,12 +89,16 @@ body, html {
     padding: 10px;
     background-color: #f8f9fa;
     font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .accessibility {
     flex: 1;
     text-align: center;
 }
+
 .accessibility button {
     border: none;
     background: none;

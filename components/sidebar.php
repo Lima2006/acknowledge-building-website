@@ -53,6 +53,7 @@ $render = function () {
 <style>
   .sidebar {
     width: 200px;
+    flex-shrink: 0;
     background-color: #fff;
     color: #333;
     padding: 20px;

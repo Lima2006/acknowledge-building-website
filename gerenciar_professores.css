@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: auto;
     background-color: #f9f9f9;
 }
 h1 {
@@ -41,7 +41,18 @@ h1 {
     font-size: 0.9em;
     color: #555;
 }
+.container {
+    display: flex;
+    height: 100%;
+}
 
+/* Menu Lateral */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+}
 /* Reset básico */
 * {
     margin: 0;
@@ -88,7 +99,4 @@ h1 {
 .zoom-text {
     font-size: 14px;
     color: #333;
-}
-.container {
-    display: flex;
 }

@@ -8,10 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['material_id'], $_POST
     // Define a consulta SQL com base na ação recebida
     if ($action === 'aprovar') {
         $sql = "UPDATE material SET aprovado = 1 WHERE id = ?";
-    } elseif ($action === 'proibir') {
-        $sql = "UPDATE material SET proibido = 1 WHERE id = ?";
-    } elseif ($action === 'permitir') {
-        $sql = "UPDATE material SET proibido = 0 WHERE id = ?";
+    } elseif ($action === 'invalidar') {
+        $sql = "UPDATE material SET aprovado = 0 WHERE id = ?";
     } else {
         header("Location: gerenciar_materiais.php?error=Ação inválida.");
         exit();

@@ -18,6 +18,7 @@
       background-repeat: no-repeat; /* Evita que a imagem se repita */
       background-attachment: fixed; /* Faz a imagem ficar estática ao rolar */
       height: 100vh; /* Garante que o fundo cubra a altura da tela */
+      font-family: Arial, sans-serif;
     }
   </style>
 </head>

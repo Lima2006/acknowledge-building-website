@@ -58,9 +58,9 @@ if (
 </head>
 
 <body>
-
   <div class="container">
     <img src="assets/logo.png" alt="Imagem" class="imagem-logo">
+    <a href="login.php" class="create-class-button"><</a>
     <h2>Dados Pessoais</h2>
 
     <form id="registrationForm" onsubmit="validateForm(event)" method="POST">

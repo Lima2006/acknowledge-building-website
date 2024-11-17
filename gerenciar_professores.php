@@ -10,8 +10,13 @@
 include 'connection.php';
 
 $query = "SELECT id, nome, email FROM usuario WHERE tipo_professor = TRUE AND status = 'ATIVO'";
-$stmt = $conn->query($query);
-$professores = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$result = $conn->query($query);
+
+if ($result) {
+    $professores = $result->fetch_all(MYSQLI_ASSOC); // Converte os resultados para um array associativo
+} else {
+    $professores = []; // Define um array vazio caso a consulta falhe
+}
 
 ?>
 <body>

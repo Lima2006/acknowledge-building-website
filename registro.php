@@ -1,3 +1,53 @@
+<?php
+include "connection.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recebe os dados do formulário
+    $nome = $_POST['name'];
+    $dob = $_POST['dob'];
+    $sexo = $_POST['gender'];
+    $email = $_POST['email'];
+    $senha = $_POST['password'];
+    $status = 'ATIVO';
+
+    // Define os tipos de usuário
+    $selectedUserType = $_POST['userType'];
+    $tipo_professor = ($selectedUserType == 'professor') ? 1 : 0;
+    $tipo_administrador = 0;
+    $tipo_responsavel = ($selectedUserType == 'responsavel') ? 1 : 0;
+    $tipo_aluno = ($selectedUserType == 'aluno') ? 1 : 0;
+
+    // Cria o hash da senha
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+    // Prepara a query para inserção
+    $sql = "INSERT INTO usuario (nome, data_de_nascimento, sexo, email, senha, tipo_professor, tipo_administrador, tipo_responsavel, tipo_aluno, status) 
+            VALUES ($nome, $dob, $gender, $email, $senha, $tipo_professor, $tipo_administrador,$tipo_responsavel, $tipo_aluno, $status)";
+
+    // Usa prepared statement para evitar SQL Injection
+    if ($stmt = $conn->prepare($sql)) {
+        // Associa os parâmetros
+        $stmt->bind_param("sssssiisss", $nome, $dob, $sexo, $email, $senhaHash, $tipo_professor, $tipo_administrador, $tipo_responsavel, $tipo_aluno, $status);
+
+        // Executa a query
+        if ($stmt->execute()) {
+            echo "Novo registro criado com sucesso!";
+            // Redireciona para a página de login
+            header("Location: login.php");
+            exit();
+        } else {
+            echo "Erro: " . $stmt->error;
+        }
+
+        // Fecha a declaração
+        $stmt->close();
+    } else {
+        echo "Erro na preparação da query: " . $conn->error;
+    }
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -147,7 +197,7 @@
         }
 
         if (isValid) {
-            alert('Cadastro realizado com sucesso!');
+            document.getElementById('registrationForm').submit();
             document.getElementById('registrationForm').reset();
             selectedUserType = null;
 

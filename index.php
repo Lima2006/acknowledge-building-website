@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pesquisar Turmas</title>
   <link rel="stylesheet" href="procurar_turmas.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
   <style>
     body {
       margin: 0;

@@ -22,6 +22,7 @@ $result = $stmt->get_result();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suas Turmas</title>
   <link rel="stylesheet" href="suas_turmas_professor.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 
 <body>

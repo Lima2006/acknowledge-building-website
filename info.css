@@ -10,6 +10,9 @@ body, html {
 }
 
 .header-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     font-weight: bold;
     font-size: 18px;
     color: #333;
@@ -21,7 +24,6 @@ body, html {
     align-items: center;
     min-height: 100vh;
     background-color: #f8f9fa;
-    margin: auto;
 }
 
 .main-content {

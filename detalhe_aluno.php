@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações do Aluno</title>
-    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="detalhe_aluno.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle" />
 </head>
 <body>
@@ -72,6 +72,6 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 
-    <script src="info.js"></script>
+    <script src="detalhe_aluno.js"></script>
 </body>
 </html>

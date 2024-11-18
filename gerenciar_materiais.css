@@ -112,16 +112,50 @@ body {
     color: #666;
 }
 
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 10px 20px;
-    background-color: #fff;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos do footer*/
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f4f4f4;
     border-top: 1px solid #ddd;
-}
-
-.accessibility a {
-    text-decoration: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-left p {
     font-size: 14px;
-    color: #007bff;
-}
+    color: #333;
+  }
+  
+  .footer-right {
+    text-align: center;
+  }
+  
+  .footer-right h4 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+  }
+  
+  .accessibility {
+    display: flex;
+    align-items: center;
+  }
+  
+  .zoom-icon {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  
+  .zoom-text {
+    font-size: 14px;
+    color: #333;
+  }

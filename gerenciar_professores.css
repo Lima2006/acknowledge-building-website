@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    margin: auto;
     background-color: #f9f9f9;
 }
 h1 {
@@ -60,8 +59,8 @@ h1 {
     box-sizing: border-box;
 }
 
-/* Estilos do footer*/
-.footer {
+  /* Estilos do footer*/
+  .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,34 +68,34 @@ h1 {
     background-color: #f4f4f4;
     border-top: 1px solid #ddd;
     font-family: Arial, sans-serif;
-}
-
-.footer-left p {
+  }
+  
+  .footer-left p {
     font-size: 14px;
     color: #333;
-}
-
-.footer-right {
+  }
+  
+  .footer-right {
     text-align: center;
-}
-
-.footer-right h4 {
+  }
+  
+  .footer-right h4 {
     font-size: 16px;
     font-weight: normal;
     margin-bottom: 5px;
-}
-
-.accessibility {
+  }
+  
+  .accessibility {
     display: flex;
     align-items: center;
-}
-
-.zoom-icon {
+  }
+  
+  .zoom-icon {
     font-size: 16px;
     margin-right: 5px;
-}
-
-.zoom-text {
+  }
+  
+  .zoom-text {
     font-size: 14px;
     color: #333;
-}
+  }

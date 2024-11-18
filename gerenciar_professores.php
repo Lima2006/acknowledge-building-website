@@ -44,17 +44,17 @@ if ($result) {
         </div>
         </div>
     </div>
-<footer class="footer">
-        <div class="footer-left">
-            <p>Copyright Arquitetos do Conhecimento 2024</p>
-        </div>
-        <div class="footer-right">
-            <h4>Acessibilidade</h4>
-            <div class="accessibility">
-                <span class="zoom-icon">🔍</span>
-                <span class="zoom-text">Aumentar Fonte</span>
+    <footer class="footer">
+            <div class="footer-left">
+                <p>Copyright Arquitetos do Conhecimento 2024</p>
             </div>
-        </div>
-</footer>
+            <div class="footer-right">
+                <h4>Acessibilidade</h4>
+                <div class="accessibility">
+                    <span class="zoom-icon">🔍</span>
+                    <span class="zoom-text">Aumentar Fonte</span>
+                </div>
+            </div>
+    </footer>
 </body>
 </html>

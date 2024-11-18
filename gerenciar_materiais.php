@@ -75,11 +75,17 @@
             </div>
         </main>
     </div>
-    <footer>
-        <p>Copyright Arquitetos do Conhecimento 2024</p>
-        <div class="accessibility">
-            <a href="#">Aumentar Fonte</a>
+    <footer class="footer">
+        <div class="footer-left">
+            <p>Copyright Arquitetos do Conhecimento 2024</p>
         </div>
-    </footer>
+        <div class="footer-right">
+            <h4>Acessibilidade</h4>
+            <div class="accessibility">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-text">Aumentar Fonte</span>
+            </div>
+        </div>
+</footer>
 </body>
 </html>
